@@ -56,14 +56,14 @@ const Register = () => {
       <Row>
           <Col>
              <Form.Label>First Name</Form.Label>
-             <Form.Control className='mb-3' id="First name" 
+             <Form.Control className='mb-3'
              value={formData.firstName}
              onChange={(e) => setFormData({...formData, firstName: e.target.value})} required/>
              <Form.Control.Feedback type='invalid'>please add firstname</Form.Control.Feedback>
           </Col>
           <Col>
              <Form.Label >Last Name</Form.Label>
-             <Form.Control className='mb-2' id="Last name" 
+             <Form.Control className='mb-2' 
               value={formData.lastName}
               onChange={(e) => setFormData({...formData, lastName: e.target.value})} required/>
               <Form.Control.Feedback type='invalid'>please add lastname</Form.Control.Feedback>
@@ -72,7 +72,7 @@ const Register = () => {
       <Row>
           <Col>
              <Form.Label >Email</Form.Label>
-             <Form.Control className='mb-3' id="Email" 
+             <Form.Control className='mb-3'  
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})} required/>
               <Form.Control.Feedback type='invalid'>please add email</Form.Control.Feedback>
@@ -81,7 +81,7 @@ const Register = () => {
       <Row>
           <Col>
               <Form.Label >Date of Birth</Form.Label>
-              <Form.Control type="date" id="date of birth" 
+              <Form.Control type="date"  
                value={formData.dateOfBirth}
                onChange={(e) => setFormData({...formData, dateOfBirth: e.target.value})} required/>
                <Form.Control.Feedback type='invalid'>please add Date of Birth</Form.Control.Feedback>
@@ -101,14 +101,14 @@ const Register = () => {
       <Row>
           <Col>
               <Form.Label >Password</Form.Label>
-              <Form.Control type='password' className='mb-3' id="password" 
+              <Form.Control type='password' className='mb-3'
                value={formData.password}
                onChange={(e) => setFormData({...formData, password: e.target.value})} required/>
                <Form.Control.Feedback type='invalid'>please add password</Form.Control.Feedback>
           </Col>
           <Col>
               <Form.Label >Repeat Password</Form.Label>
-              <Form.Control type='password' className='mb-3' id="password" 
+              <Form.Control type='password' className='mb-3'  
                value={repeatPassword}
                onChange={(e) => setRepeatPassword(e.target.value)} required/>
                <Form.Control.Feedback type='invalid'>please add repeatPassword</Form.Control.Feedback>

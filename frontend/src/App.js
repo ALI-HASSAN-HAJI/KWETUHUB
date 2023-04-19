@@ -6,6 +6,8 @@ import Practice from './pages/user/Practice';
 import ProductDetails from './components/user/ProductDetails';
 import Register from './pages/user/auth/Register';
 import  Login from './pages/user/auth/Login';
+import AddProducts from './pages/admin/AddProducts';
+import CartDetails from './pages/user/CartDetails';
 
 
 function App() {
@@ -19,6 +21,9 @@ function App() {
       <Route exact path="/practice/:id" element={<ProductDetails />} />
       <Route exact path="/register" element={<Register />} />
       <Route exact path="/login" element={<Login />} />
+      //Admin
+      <Route exact path="/admin/addproducts" element={<AddProducts/>} />
+      <Route exact path="/cartdetails" element={<CartDetails />} />
 
      </Routes>
     </div>

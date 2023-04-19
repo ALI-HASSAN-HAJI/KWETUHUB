@@ -61,7 +61,10 @@ router.post('/create', uploadProductImages, async (req, res) => {
     discount_percentage: req.body.discount_percentage
   })
   let result = await newProduct.save();
-  res.send(result);
+  res.send({
+    message: 'Product added successfully!',
+    data: result
+  });
 });
 
 

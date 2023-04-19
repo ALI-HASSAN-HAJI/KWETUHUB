@@ -10,11 +10,15 @@ import arsenalRoutes from './routes/arsenalRoutes.js';
 import productRoutes from './routes/productRoutes.js'; 
 import userAuth from './routes/userAuth.js';
 import adminRoutes from './routes/adminRoutes.js';
+import categoryRouter from './routes/categoryRouter.js';
+import cartRoutes from './routes/cartRoutes.js';
 
 
 const app = express();
 const PORT = 4000;
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());// used data transfer from backend to frontend;
 app.use(express.static('uploads')); // exposes this folder so that we can access the images from the frontend
 const mongoUri = 'mongodb+srv://Ali-Haji:'+ encodeURIComponent('Haji@1234') +'@cluster0.7cpeakk.mongodb.net/?retryWrites=true&w=majority'
@@ -25,13 +29,15 @@ mongoose
    .catch(console.error)
 
 app.use('/lesson', exampleRoute);
-app.use('/practice', practiceRoute);
+app.use('/practice', practiceRoute); 
 app.use('/student', studentRoutes);
 app.use('/category', categoryRoute); 
 app.use('/arsenal', arsenalRoutes);
 app.use('/product', productRoutes); 
 app.use('/', userAuth);
 app.use('/admin', adminRoutes); 
+app.use('/categories', categoryRouter);
+app.use('/cart', cartRoutes);
 
 app.listen(PORT, () => {
   console.log("Server listening on PORT: "+PORT)
