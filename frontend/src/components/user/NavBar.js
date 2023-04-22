@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg" style={styles.nav}>
       <span style={styles.cartQuantity}>1</span>
-      <a href='#' style={styles.cart}><ShoppingCartIcon /></a>
+      <a href='/cartdetails' style={styles.cart}><ShoppingCartIcon /></a>
     </Navbar>
   )
 }

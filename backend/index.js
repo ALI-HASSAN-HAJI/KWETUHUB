@@ -12,6 +12,7 @@ import userAuth from './routes/userAuth.js';
 import adminRoutes from './routes/adminRoutes.js';
 import categoryRouter from './routes/categoryRouter.js';
 import cartRoutes from './routes/cartRoutes.js';
+import pickupPointRoutes from './routes/pickupPointRoutes.js';
 
 
 const app = express();
@@ -38,7 +39,8 @@ app.use('/', userAuth);
 app.use('/admin', adminRoutes); 
 app.use('/categories', categoryRouter);
 app.use('/cart', cartRoutes);
+app.use('/pickuppoint', pickupPointRoutes);
 
 app.listen(PORT, () => {
-  console.log("Server listening on PORT: "+PORT)
+  console.log("Server listening on PORT: "+PORT) 
 });

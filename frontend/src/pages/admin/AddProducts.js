@@ -39,8 +39,8 @@ const AddProducts = () => {
     formData.append('discountPercentage', productData.discountPercentage);
     const { data } = await publicApi.post('/product/create', formData);
     console.log(data);
-    if(data.message === 'product added successfully!!') {
-      navigate('/')
+    if(data.message === 'Product added successfully!') {
+      navigate('/')// This will take you to home page
     }
   } catch (error) {
     console.log(error);
